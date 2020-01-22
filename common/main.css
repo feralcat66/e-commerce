@@ -1,0 +1,14 @@
+* {
+   background-color: white
+}
+img{
+    width: 80%;
+}
+h1, h2 {
+    color: black;
+    text-align: center;
+}
+a{
+    color: blue;
+    align-self: center;
+}
