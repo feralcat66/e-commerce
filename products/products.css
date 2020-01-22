@@ -15,6 +15,7 @@
     margin-bottom: auto;
     text-align: center;
     transition: transform 200ms ease-in-out;
+    background-color: white;
 }
 
 #islands li:hover {
@@ -23,4 +24,11 @@
 }
 #islands li img {
     height: 50%
+}
+body{
+    font-family: "Cormorant Unicase", serif;
+    text-align: center;
+    font-size: 15px;
+    color: green
+    
 }
