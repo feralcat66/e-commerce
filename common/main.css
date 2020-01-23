@@ -1,0 +1,23 @@
+* {
+   
+}
+img{
+    width: 80%;
+}
+h1, h2 {
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    background-color: blanchedalmond;
+}
+a{
+    color: blue;
+    align-self: center;
+}
+body {
+    background-color: slategray;
+    font-family: "Cormorant Unicase", serif;
+    text-align: center;
+    font-size: 15px;
+    
+}
