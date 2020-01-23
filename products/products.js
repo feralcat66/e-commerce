@@ -1,5 +1,5 @@
 import islands from '../data/islands.js';
-import renderIsland from './render-island.js'
+import renderIsland from './render-island.js';
 
 const list = document.getElementById('islands');
 
