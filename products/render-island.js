@@ -30,34 +30,30 @@ function renderIsland(island){
         if (storage) {
             cart = JSON.parse(storage);
         }
-            else{
-                cart = [];
-            }
-            let lineItem = findById(cart, island.id);
+        else {
+            cart = [];
+        }
+        let lineItem = findById(cart, island.id);
 
-            if (!lineItem) {
-                lineItem = {
-                    id: island.id,
-                    quantity: 1
-                };
-                cart.push(lineItem);
-            }else {
-                lineItem.quantity++;
-            }
-            storage = JSON.stringify(cart);
-            localStorage.setItem('CART', storage);
+        if (!lineItem) {
+            lineItem = {
+                id: island.id,
+                quantity: 1
+            };
+            cart.push(lineItem);
+        } else {
+            lineItem.quantity++;
+        }
+        storage = JSON.stringify(cart);
+        localStorage.setItem('CART', storage);
 
         
     });
 
     p.appendChild(button);
 
-
-
     li.appendChild(p);
-
-
-
+    
     return li;
 
 }
