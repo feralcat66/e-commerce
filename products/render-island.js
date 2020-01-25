@@ -1,3 +1,5 @@
+import { findById } from "../common/utilities.js";
+
 function renderIsland(island){
     const li = document.createElement('li');
     li.className = island.category;
@@ -20,11 +22,38 @@ function renderIsland(island){
 
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = island.code;
+    button.value = island.id;
+    button.addEventListener('click', () => {
+
+        let storage = localStorage.getItem('CART');
+        let cart;
+        if (storage) {
+            cart = JSON.parse(storage);
+        }
+        else {
+            cart = [];
+        }
+        let lineItem = findById(cart, island.id);
+
+        if (!lineItem) {
+            lineItem = {
+                id: island.id,
+                quantity: 1
+            };
+            cart.push(lineItem);
+        } else {
+            lineItem.quantity++;
+        }
+        storage = JSON.stringify(cart);
+        localStorage.setItem('CART', storage);
+
+        
+    });
+
     p.appendChild(button);
 
     li.appendChild(p);
-
+    
     return li;
 
 }
